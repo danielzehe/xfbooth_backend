@@ -1,0 +1,19 @@
+{
+  "name": "xfbooth_backend",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielzehe/xfbooth_backend.git"
+  },
+  "author": "Daniel Zehe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielzehe/xfbooth_backend/issues"
+  },
+  "homepage": "https://github.com/danielzehe/xfbooth_backend#readme"
+}
