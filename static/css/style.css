@@ -1,0 +1,64 @@
+body{
+	background-color:white;
+	padding-right:15px;
+	padding-left: 15px;
+}
+
+@font-face{
+	font-family: Reusk;
+	src:url(/static/fonts/Reusk.otf);
+}
+
+
+.heading{
+	font-family: Reusk;
+	font-size: 45pt;
+	color:#0d0d0d;
+	text-align: center;
+	margin-top: 2%
+}
+
+#inputform{
+	text-align: center;
+}
+
+#inputform input{
+	text-align: center;
+	margin: 10px 0;
+	/*height: 45px;*/
+	font-size: 25pt;
+	width: 400px;
+	font-family: Baskerville;
+}
+img{
+	width: 100%;
+}
+
+#inputform button{
+	width: 400px;
+	font-size: 25pt;
+	background-color:lightgrey;
+	border-color: gray;
+}
+#instruction{
+	text-align: center;
+	font-size: 15pt;
+	font-family: Baskerville;
+	margin-bottom: 2%;
+}
+.error{
+	background-color: rgba(255, 182, 193, 0.66);
+}
+#controlpannel{
+	text-align: center;
+	margin-top: 10px
+}
+#cards{
+	font-family: Baskerville;
+}
+#attending{
+
+}
+#attending > li{
+	list-style-type: none;
+}
