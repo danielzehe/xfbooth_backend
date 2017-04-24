@@ -18,9 +18,13 @@ app.use('/thumbs',express.static(__dirname + '/thumbs'));
 app.use('/static',express.static(__dirname + '/static'));
 
 app.get('/',function(req,res){
-	fs.readdir(__dirname+'/uploads', (err,files)=>{
-		res.render('overview',{pics:files});
-	});
+	var files = fs.readdirSync(__dirname+'/uploads');
+	files.sort(function(a, b) {
+               return fs.statSync(__dirname+'/uploads/' + a).mtime.getTime() - 
+                      fs.statSync(__dirname+'/uploads/' + b).mtime.getTime();
+           });
+	console.log(files);
+	res.render('overview',{pics:files});
 })
 api_router.get('/',function(req,res){
 	res.status(200).send("all API Endpoints");
@@ -61,9 +65,16 @@ api_router.post('/upload',  uploading.single('avatar'), function(req, res,next) 
 web_router.get('/overview',function(req,res){
 	// let pics = ['hallo','welt','heute']
 
-	fs.readdir(__dirname+'/uploads', (err,files)=>{
-		res.render('overview',{pics:files});
-	});
+	var files = fs.readdirSync(__dirname+'/uploads');
+	files.sort(function(a, b) {
+               return fs.statSync(__dirname+'/uploads/' + a).mtime.getTime() - 
+                      fs.statSync(__dirname+'/uploads/' + b).mtime.getTime();
+           });
+	console.log(files);
+	res.render('overview',{pics:files});
+	// fs.readdir(__dirname+'/uploads', (err,files)=>{
+	// 	res.render('overview',{pics:files});
+	// });
 })
 
 web_router.get('/singlepic/:picname',function(req,res){
