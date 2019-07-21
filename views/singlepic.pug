@@ -6,9 +6,29 @@ html(lang="en")
     link(rel='stylesheet', href='/static/bootstrap/css/bootstrap-theme.css', type='text/css' )
     link(rel='stylesheet', href='/static/bootstrap/css/bootstrap.min.css', type='text/css' )
     link(rel='stylesheet', href='/static/css/style.css', type='text/css' )
+
+
+    //- meta(property="og:url"           content='https://photobooth.danielwithsilver.com/web/singlepic/'+val)
+    //- meta( property="og:type"          content="website" )
+    //- meta( property="og:title"         content="Your Website Title" )
+    //- meta( property="og:description"   content="Your description" )
+    //- meta( property="og:image"         content='https://photobooth.danielwithsilver.com/boothpic/'+val )
+
+
   body
+    //- #fb-root
+    //- script.
+    //-     (function(d, s, id) {
+    //-     var js, fjs = d.getElementsByTagName(s)[0];
+    //-     if (d.getElementById(id)) return;
+    //-     js = d.createElement(s); js.id = id;
+    //-     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    //-     fjs.parentNode.insertBefore(js, fjs);
+    //-     }(document, 'script', 'facebook-jssdk'));
+
     div.heading Wedding of Xiu Fen and Daniel
     img(src='http://photobooth.danielwithsilver.com/boothpic/'+val)
+    //- div.fb-share-button( data-href='https://photobooth.danielwithsilver.com/web/singlepic/'+val data-layout="button_count")
     //- ul
     //-     each val in pics
     //-         li=val

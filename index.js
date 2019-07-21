@@ -19,7 +19,7 @@ app.use('/static',express.static(__dirname + '/static'));
 
 app.get('/',function(req,res){
 	var files = fs.readdirSync(__dirname+'/uploads');
-	files.sort(function(a, b) {
+	files.sort(function(b, a) {
                return fs.statSync(__dirname+'/uploads/' + a).mtime.getTime() - 
                       fs.statSync(__dirname+'/uploads/' + b).mtime.getTime();
            });
@@ -32,7 +32,7 @@ api_router.get('/',function(req,res){
 
 let uploading = multer({
   dest: __dirname + '/tmpuploads/',
-  limits: {fileSize: 10000000, files:1},
+  limits: {fileSize: 50000000, files:1},
 })
 
 
@@ -66,7 +66,7 @@ web_router.get('/overview',function(req,res){
 	// let pics = ['hallo','welt','heute']
 
 	var files = fs.readdirSync(__dirname+'/uploads');
-	files.sort(function(a, b) {
+	files.sort(function(b, a) {
                return fs.statSync(__dirname+'/uploads/' + a).mtime.getTime() - 
                       fs.statSync(__dirname+'/uploads/' + b).mtime.getTime();
            });
